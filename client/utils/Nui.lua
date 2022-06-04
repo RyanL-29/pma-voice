@@ -9,3 +9,8 @@ RegisterNUICallback("uiReady", function(data, cb)
 
 	cb('ok')
 end)
+
+RegisterNetEvent("voice_toggleui:toggle")
+AddEventHandler('voice_toggleui:toggle', function(toggle)
+	sendUIMessage({uiEnabled = toggle})
+end)

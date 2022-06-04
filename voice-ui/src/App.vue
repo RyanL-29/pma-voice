@@ -3,7 +3,7 @@
 		<audio id="audio_on" src="mic_click_on.ogg"></audio>
 		<audio id="audio_off" src="mic_click_off.ogg"></audio>
 		<div v-if="voice.uiEnabled" class="voiceInfo">
-			<p v-if="voice.callInfo !== 0" :class="{ talking: voice.talking }">
+			<p>
 				<button class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-btn-raised" :class="{ talking: voice.talking }" :style="voice.voiceStatusStyle">
 					<i v-if="voice.callInfo !== 0" class="mdui-icon material-icons mdui-text-color-white-icon">phone_in_talk</i>
 					<i v-else-if="voice.radioEnabled && voice.radioChannel !== 0" class="mdui-icon material-icons mdui-text-color-white-icon">wifi_tethering</i>
